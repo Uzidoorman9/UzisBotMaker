@@ -8,7 +8,7 @@ export function formatDuration(ms) {
 export function pushMemory(userMemory, userId, role, content) {
   const arr = userMemory.get(userId) || [];
   arr.push({ role, content });
-  if (arr.length > 50) arr.shift(); // keep last 50 messages
+  if (arr.length > 50) arr.shift();
   userMemory.set(userId, arr);
 }
 
